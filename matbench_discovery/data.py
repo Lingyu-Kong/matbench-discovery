@@ -349,7 +349,7 @@ class DataFiles(Files):
         """YAML data associated with the file."""
         yaml_path = f"{PKG_DIR}/data-files.yml"
 
-        with open(yaml_path) as file:
+        with open(yaml_path, 'r', encoding='utf-8') as file:
             yaml_data = yaml.safe_load(file)
 
         if self.name not in yaml_data:
